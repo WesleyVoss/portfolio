@@ -1,0 +1,71 @@
+/* Sobre */
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90%;
+    max-width: 1600px;
+
+    min-height: 100vh;
+    margin: 0 auto;
+
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    gap: clamp(2rem, 5vw, 7rem);
+}
+
+/* Textos da aba sobre */
+.sobre-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+    color: var(--laranja-forte);
+}
+
+.sobre-texto {
+    font-size: 1rem;
+    flex: 2;
+    padding: 1rem;
+}
+
+/* Foto */
+.foto-perfil {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-perfil img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Monitores grandes */
+@media (min-width: 1600px) {
+    .sobre {
+        max-width: 1600px;
+        gap: 7rem;
+    }
+
+    .sobre-texto {
+        font-size: 1.15rem;
+    }
+
+    .foto-perfil img {
+        max-width: 400px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .sobre {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

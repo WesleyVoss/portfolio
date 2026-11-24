@@ -1,0 +1,106 @@
+/* SEÇÃO DE CONHECIMENTOS */
+
+.stacks {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: var(--azul-principal);
+
+    padding: 5rem 5%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.stacks-titulo {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.stacks-titulo h2 {
+    color: var(--cinza-claro);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.stacks-titulo p {
+    color: var(--laranja-claro);
+    font-size: 1.1rem;
+}
+
+/* CONTAINER DOS CARDS */
+
+.stacks-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* CARDS INDIVIDUAIS */
+
+.stack-card {
+    background-color: var(--cinza-claro);
+    border-top: 4px solid var(--laranja-forte);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(10, 35, 66, 0.10);
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.stack-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(10, 35, 66, 0.20);
+
+    border-top-color: var(--laranja-claro);
+}
+
+.stack-icon {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.stack-card h3 {
+    color: var(--azul-principal);
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+}
+
+.stack-card p {
+    color: var(--azul-claro);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .stacks-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .stacks-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stacks-titulo h2 {
+        font-size: 2rem;
+    }
+}

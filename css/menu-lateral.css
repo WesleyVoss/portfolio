@@ -1,0 +1,52 @@
+
+/* MENU LATERAL FLUTUANTE */
+
+.menu-lateral {
+    position: fixed;
+
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: var(--laranja-claro);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1rem 0.7rem;
+
+    border-radius: 40px;
+
+    z-index: 1000;
+}
+
+/* ÍCONES */
+
+.menu-lateral a {
+    color: #000000;
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    transition: transform 0.3s ease,
+                color 0.3s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.menu-lateral a:hover {
+    color: var(--azul-principal);
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .menu-lateral {
+        display: none;
+    }
+}
