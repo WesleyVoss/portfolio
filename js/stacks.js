@@ -12,7 +12,7 @@ const observador = new IntersectionObserver((entradas) => {
     });
 }, {
     threshold: 0,
-    rootMargin: "-10% 0px -20% 0px"
+    rootMargin: "2% 0px -25% 0px"
 });
 
 elementos.forEach((elemento) => {
